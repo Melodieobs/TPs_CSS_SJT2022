@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* TABLE DES CONTENUS : */
+/* -------------------- */
+/*                      */
+/* 1 | GLOBAL           */
+/* 2 | FRANCE           */
+/* 3 | ALLEMAGNE        */
+/* 4 | JAPON            */
+/* 5 | SUISSE           */
+/* 6 | NORVEGE          */
+/* 7 | BONUS            */
+/* -------------------- */
+
+/* 1 | GLOBAL           */
+* {
+  margin: auto;
+  margin-top: 10px;
+}
+.benin::before, .benin::after, .japon::after, .suisse::before, .suisse::after, .allemagne::before, .allemagne::after, .france::before, .france::after, .norvege::before, .norvege::after{
+  position: absolute;
+  content: "";
+}
+.cameron::before, .norvege::after, .suisse::before, .suisse::after, .japon::after{
+  left: 50%;
+}
+.cameron::before, .norvege::before, .norvege::after, .suisse::before, .suisse::after, .japon::after{
+  transform: translate(-50%, -50%);
+}
+.france, .allemagne, .japon, .norvege, .benin, .cameron{
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+.norvege::before, .norvege::after, .suisse::before, .suisse::after, .japon::after {
+  top: 50%;
+}
+.benin::before, .benin::after, .allemagne::after, .france::after {
+  right: 0;
+}
+
+/* 2 | FRANCE           */
+.france::before, .france::after{
+  height: 100%;
+  width: 33%;
+  
+}
+.france::before {
+  background-color: blue;
+  left: 0;
+  top: 0;
+}
+.france::after {
+  background-color: red;
+}
+
+/* 3 | ALLEMAGNE        */
+.allemagne::before, .allemagne::after{
+  height: 33%;
+  width: 100%;
+}
+.allemagne {
+  background-color: rgb(255, 0, 0);
+}
+.allemagne::before {
+  background-color: rgb(255, 132, 0);
+  left: 0;
+  top: 67%;
+}
+.allemagne::after {
+  background-color: rgb(0, 0, 0);
+}
+
+/* 4 | JAPON            */
+.japon {
+  background-color: rgb(247, 244, 244);
+}
+.japon::after {
+  background-color: red;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+/* 5 | SUISSE           */
+.suisse {
+  background-color: red;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.suisse::before, .suisse::after{
+  background-color: white;
+}
+.suisse::before {
+  width: 16.66%;
+  height: 66%;
+}
+.suisse::after {
+  height: 16.66%;
+  width: 66%;
+}
+
+/* 6 | NORVEGE          */
+.norvege {
+  background-color: red;
+}
+.norvege::before, .norvege::after{
+  background-color: blue;
+}
+.norvege::before {
+  border-right: 4px solid #ffffff;
+  border-left: 4px solid #ffffff;
+  height: 100%;
+  width: 10%;
+  left: 30%;
+}
+.norvege::after {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  height: 14%;
+  width: 100%;
+}
+
+/* 7 | BONUS            */
+.benin {
+  background-color: rgb(32, 106, 25);
+}
+.benin::before, .benin::after{
+  height: 50%;
+  width: 50%;
+}
+.benin::before {
+  background-color: rgb(255, 0, 0);
+  top: 50%;
+}
+.benin::after {
+  background-color: rgb(255, 247, 0);
+}
+
+.cameron {
+  background: linear-gradient(90deg, rgb(29, 164, 0) 33%, rgb(255, 6, 6) 33%, rgb(255, 6, 6) 67%, rgb(233, 255, 0) 67%);
+}
+.cameron::before {
+  content: "★";
+  position: absolute;
+  color: yellow;
+  font-size: 50px;
+  top: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

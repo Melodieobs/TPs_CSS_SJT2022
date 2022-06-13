@@ -1,0 +1,70 @@
+/* TABLE DES CONTENUS : */
+/* -------------------- */
+/*                      */
+/* 1 | GLOBAL           */
+/* 2 | HEADER           */
+/* 3 | MAIN             */
+/* 4 | ARTICLES         */
+/* -------------------- */
+
+/* 1 | GLOBAL           */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1,h2{
+    margin: 40px 0;
+}
+
+/* 2 | HEADER           */
+header{
+    background-color: black;
+    height: 60px;
+    
+}
+header nav{
+    padding-top: 20px;
+    width: 100%;
+    margin: auto;
+    text-align: right;
+}
+header nav li{
+    padding: 10px;
+    display: inline;
+}
+
+header nav a{
+    color:#FFFFFF
+}
+header p{
+    border: solid #FFFFFF 1px;
+    color: #FFFFFF;
+    float: left;
+    padding: 10px 25px 10px 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/* 3 | MAIN             */
+main{
+    max-width: 1150px;
+    margin: auto;
+}
+
+main .text{
+    text-align: justify;
+}
+
+main img{
+    width: 300px;
+}
+
+/* 4 | ARTICLES         */
+article .imageFlottanteDroite{
+    float: right;
+
+}
+article .imageFlottanteGauche{
+    float: left;
+}
