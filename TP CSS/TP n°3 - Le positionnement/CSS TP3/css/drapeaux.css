@@ -1,192 +1,151 @@
+@charset "UTF-8";
+/* TABLE DES CONTENUS : */
+/* -------------------- */
+/*                      */
+/* 1 | GLOBAL           */
+/* 2 | FRANCE           */
+/* 3 | ALLEMAGNE        */
+/* 4 | JAPON            */
+/* 5 | SUISSE           */
+/* 6 | NORVEGE          */
+/* 7 | BONUS            */
+/* -------------------- */
 
-/* Flag 3 drapeaux France      */
-div.flag{
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    width: 200px;
-    height: 300px;
-    top: 0;
+/* 1 | GLOBAL           */
+* {
+  margin: auto;
+  margin-top: 10px;
 }
-
-div.flag:after, div.flag:before{
-    position: absolute;
-    content:"";
-    width: 100px;
-    height: 300px;
+.benin::before, .benin::after, .japon::after, .suisse::before, .suisse::after, .allemagne::before, .allemagne::after, .france::before, .france::after, .norvege::before, .norvege::after{
+  position: absolute;
+  content: "";
 }
-div.flag:after{
-    background-color: rgb(255, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 100%;
+.cameron::before, .norvege::after, .suisse::before, .suisse::after, .japon::after{
+  left: 50%;
 }
-div.flag:before{
-    background-color: blue;
-    top: 0;
-    bottom: 0;
-    left: 0;
+.cameron::before, .norvege::before, .norvege::after, .suisse::before, .suisse::after, .japon::after{
+  transform: translate(-50%, -50%);
 }
-/* Flag 3 drapeaux Allemagne       */
-div.flag1{
-    position: relative;
-    background-color: rgb(255, 136, 0);
-    width: 300px;
-    height: 200px;
-    top: 15px;
+.france, .allemagne, .japon, .norvege, .benin, .cameron{
+  position: relative;
+  width: 300px;
+  height: 200px;
 }
-
-div.flag1:after, div.flag1:before{
-    position: absolute;
-    content:"";
-    width: 300px;
-    height: 100px;
+.norvege::before, .norvege::after, .suisse::before, .suisse::after, .japon::after {
+  top: 50%;
 }
-div.flag1:after{
-    background-color: rgb(255, 0, 0);
-    top: 100%;
-    bottom: 0;
-    left: 0;
-}
-div.flag1:before{
-    background-color: rgb(0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-}
-/* Flag 3 drapeaux Japon        */
-div.flag2{
-    position: relative;
-    width: 300px;
-    height: 200px;
-    top: 150px;
+.benin::before, .benin::after, .allemagne::after, .france::after {
+  right: 0;
 }
 
-div.flag2:before{
-    position: absolute;
-    content:"";
-    background-color: rgb(224, 224, 224);
-    width: 300px;
-    height: 200px;
-    bottom: 0;
-    left: 0;
+/* 2 | FRANCE           */
+.france::before, .france::after{
+  height: 100%;
+  width: 33%;
+  
+}
+.france::before {
+  background-color: blue;
+  left: 0;
+  top: 0;
+}
+.france::after {
+  background-color: red;
 }
 
-div.flag2:after{
-    position: relative;
-    content:"•";
-    font-size: 500px;
-    color: rgb(255, 0, 0);
-    left: 20%;
-    bottom: 95%;
+/* 3 | ALLEMAGNE        */
+.allemagne::before, .allemagne::after{
+  height: 33%;
+  width: 100%;
 }
-/* Flag 3 drapeaux Suisse        */
-div.flag3{
-    position: relative;
-    width: 300px;
-    height: 200px;
-    top: 200px;
+.allemagne {
+  background-color: rgb(255, 0, 0);
 }
-
-div.flag3:before{
-    position: absolute;
-    content:"";
-    background-color: rgb(255, 0, 0);
-    width: 300px;
-    height: 200px;
-    bottom: 0;
-    left: 0;
+.allemagne::before {
+  background-color: rgb(255, 132, 0);
+  left: 0;
+  top: 67%;
+}
+.allemagne::after {
+  background-color: rgb(0, 0, 0);
 }
 
-div.flag3:after{
-    position: relative;
-    content:"+";
-    font-size: 300px;
-    font-weight: bolder;
-    color: rgb(248, 248, 248);
-    left: 20%;
-    bottom: 40%;
+/* 4 | JAPON            */
+.japon {
+  background-color: rgb(247, 244, 244);
 }
-/* Flag 4 drapeaux norvège        */
-div.flag4{
-    position: relative;
-    width: 300px;
-    height: 200px;
-    top: 250px;
-    background-color: red;
-}
-div.flag4:after, div.flag4:before{
-    position: absolute;
-    content:"";
-    width: 300px;
-    height: 50px;
-}
-div.flag4::after{
-    position: absolute;
-    background-color: blue;
-    border-top: 5px solid #ffffff;
-    border-bottom: 5px solid #ffffff;
-    width: 300px;
-    height: 30px;
-    top: 40%;
-    bottom: 0;
-    left: 0;
-}
-div.flag4:before{
-    position: absolute;
-    background-color: blue;
-    border-right: 5px solid #ffffff;
-    border-left: 5px solid #ffffff;
-    width: 30px;
-    height: 200px;
-    top: 0;
-    bottom: 0;
-    left: 30%;
-}
-/* Flag 5 drapeaux Bénin         */
-div.flag5{
-    position: relative;
-    background-color: rgb(14, 104, 21);
-    width: 150px;
-    height: 250px;
-    top: 300px;
+.japon::after {
+  background-color: red;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
 }
 
-div.flag5:after, div.flag5:before{
-    position: absolute;
-    content:"";
-    width: 200px;
-    height: 125px;
+/* 5 | SUISSE           */
+.suisse {
+  background-color: red;
+  position: relative;
+  width: 300px;
+  height: 300px;
 }
-div.flag5:after{
-    background-color: rgb(255, 252, 70);
-    top: 0;
-    bottom: 0;
-    left: 100%;
+.suisse::before, .suisse::after{
+  background-color: white;
 }
-div.flag5:before{
-    background-color: rgb(255, 0, 0);
-    top: 50%;
-    bottom: 0;
-    left: 100%;
+.suisse::before {
+  width: 16.66%;
+  height: 66%;
 }
-/* Flag 6 drapeaux Cameroun         */
-div.flag6{
-    position: relative;
-    background: linear-gradient(90deg, rgba(47,136,6,1) 0%, rgba(47,136,6,1) 33%, rgba(255,0,0,1) 33%, rgba(255,0,0,1) 66%, rgba(245,255,0,1) 66%);
-    width: 300px;
-    height: 200px;
-    top: 400px;
+.suisse::after {
+  height: 16.66%;
+  width: 66%;
 }
 
-div.flag6:after{
-    position: absolute;
-    width: 100px;
-    content:"★";
-    color: yellow;
-    font-size: 50px;
-    text-align: center;
-    left: 33%;
-    top: 50%;
-    transform: translateY(-50%);
-
+/* 6 | NORVEGE          */
+.norvege {
+  background-color: red;
 }
+.norvege::before, .norvege::after{
+  background-color: blue;
+}
+.norvege::before {
+  border-right: 4px solid #ffffff;
+  border-left: 4px solid #ffffff;
+  height: 100%;
+  width: 10%;
+  left: 30%;
+}
+.norvege::after {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  height: 14%;
+  width: 100%;
+}
+
+/* 7 | BONUS            */
+.benin {
+  background-color: rgb(32, 106, 25);
+}
+.benin::before, .benin::after{
+  height: 50%;
+  width: 50%;
+}
+.benin::before {
+  background-color: rgb(255, 0, 0);
+  top: 50%;
+}
+.benin::after {
+  background-color: rgb(255, 247, 0);
+}
+
+.cameron {
+  background: linear-gradient(90deg, rgb(29, 164, 0) 33%, rgb(255, 6, 6) 33%, rgb(255, 6, 6) 67%, rgb(233, 255, 0) 67%);
+}
+.cameron::before {
+  content: "★";
+  position: absolute;
+  color: yellow;
+  font-size: 50px;
+  top: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
